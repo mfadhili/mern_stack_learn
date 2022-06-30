@@ -1,0 +1,69 @@
+// web pack
+ Create webpack.config.client.js, webpack.config.server.js, and webpack.config.client.production.js files in your project folder
+
+they all have the same structure
+
+const path = require('path')
+const webpack = require('webpack')
+const CURRENT_WORKING_DIR = process.cwd()
+const config = { ... }
+module.exports = config
+
+//Nodemon.json - setup mnodemon to monitoring changes
+
+//frontend views with react
+-template.js that will render the HTML with react components
+
+add two react files main.js (renders the toplevel react components in div), helloworldjs(basic helloworld react component )
+
+//setup server with express and Nodemon
+implement the Node-Express app, which initiates client-side code bundling, starts the server, sets up the path to serve static assets to the client, and renders the React view in a template when a GET request is made to the root route
+    /bundling react app devBundle.js
+    initialize Webpack to compile the client-side code when the server is run. 
+
+    /Serving static files from the dist folder
+    To make these static files available on requests from the client side, we will add the following code in server.js to serve static files from the dist folder
+
+    /Rendering templates at the root
+    When the server receives a request at the root URL /, we will render template.js in the browser
+    then configure the app to start server listening at specified port
+
+    /Connecting the server to MongoDB
+    makesure you have a MongoDB instance 
+
+    /run script
+    update package.json with scripts
+    run development - yarn development
+    run build -yarn build
+    run bundled code - yarn start
+
+//////////////////////////////////////////////
+BACKEND WITH MongoDB, Express and Node
+ User CRUD implementaions
+ -sign up
+ -user list
+ -Authentication
+ -Protected user profile
+ -Authorised user edit and delete
+
+user module:
+    Name    string
+    email   string
+    passwd  string
+    created date
+    updated date
+
+API endpoints 
+    create user /api/users          POST
+    list users  /api/user           GET
+    fetch user  /api/user:userId    PUT
+    update user /api/user:userId    DELETE
+    Delete user /auth/signin        POST
+    user signout/auth/signout       GET
+
+// Authentication using JSON Web token
+JSON Web Token must be included in the request Authorization header as a Bearer
+
+//Config variables
+config/config.js
+server-side configuration-related variables

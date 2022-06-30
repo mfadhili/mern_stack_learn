@@ -1,0 +1,17 @@
+{
+    "presets": [
+            ["@babel/preset-env",
+                {
+                    "targets":{
+                        "node": "current"
+                    }
+                }
+    ],
+    "@babel/preset-react"
+    ],
+    "plugins": [
+        "react-hot-loader/babel"
+    ]
+}
+//babel to transile the latest js systant with suoort for code in a node an reactjsx code
+// react-hot-loader for react components
